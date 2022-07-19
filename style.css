@@ -4,20 +4,17 @@
 /* common code */
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 .half-width{
     width: 50%;
 }
-h1,h2,h3,p{
-    color:#3A3A3A;
-}
-
 
 /* header start */
 .header{
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     margin-top: 80px;
 }
 .header-title{
@@ -63,7 +60,8 @@ h1,h2,h3,p{
 /* logo sec */
 .logo-sec{
     width: 80%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     align-items: center;
     justify-content: space-evenly;
     margin-left: 120px;
@@ -73,10 +71,6 @@ h1,h2,h3,p{
     padding: 10px;
 }
 
-/* collection sec */
-.collection-sec{
-    height: 100vh;
-}
 .collection-sec h2{
     text-align: center;
     margin-top: 40px;
@@ -119,4 +113,117 @@ h1,h2,h3,p{
 }
 .desc{
     font-size: 14px;
+}
+.see-more{
+    text-align: end;
+    margin-right: 120px;
+    margin-top: 30px;
+}
+.see-more a{
+    text-decoration: none;
+    color: #E02C6D;
+    font-weight: 700;
+}
+
+/* banner-2 start */
+.banner-2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.banner-2-title{
+    margin-right: 130px;
+}
+.banner-2-title h1{
+    font-size: 30px;
+}
+.banner-2-title p{
+    margin-bottom: 40px;
+}
+.banner-2-title a{
+    text-decoration: none;
+    background-color:#E02C6D;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.banner-2-photo{
+    margin-left: 150px;
+}
+
+/* footer start */
+footer{
+    background-color: #0A0826;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.footer-icon a{
+    color: white;
+    margin-left: 20px;
+}
+.icon{
+    transition: transform 1s;
+}
+.icon:hover{
+    transform: scale(1.5);
+}
+
+/* media query */
+
+@media only screen and (max-width:668px) {
+    .header{
+        width: 80%;
+        display: block;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .banner-title{
+        margin-left: 0;
+        padding: 10px;
+        text-align: center;
+    }
+    .banner-title h1{
+        font-size: 30px;
+    }
+    .half-width{
+        width: 100%;
+    }
+    .logo-sec{
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+        margin-left: 0;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .collections{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
+    .banner-2{
+        flex-direction: column-reverse;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .banner-2-title{
+        margin-left: 0;
+        padding: 10px;
+        text-align: center;
+    }
+    .banner-2-title h1{
+        font-size: 30px;
+    }
+    .banner-2-photo{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .footer{
+        width: 100%;
+    }
 }
